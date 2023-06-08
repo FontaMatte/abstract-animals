@@ -12,6 +12,11 @@ public class Sparrow extends Animal implements CanFly{
     }
 
     @Override
+    public void getName() {
+        System.out.println("SPARROW: ");
+    }
+
+    @Override
     public void fly() {
         System.out.println("I'm flying");
     }

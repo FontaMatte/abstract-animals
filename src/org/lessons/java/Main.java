@@ -9,39 +9,56 @@ public class Main {
     }
     public static void main(String[] args) {
 
-        System.out.println("DOG");
-        Dog dog = new Dog();
-        dog.sleep();
-        dog.eat();
-        dog.noise();
+        Animal[] animals = {new Dog(), new Sparrow(), new Eagle(), new Dolphin()};
 
-        System.out.println("SPARROW");
-        Sparrow sparrow = new Sparrow();
-        sparrow.sleep();
-        sparrow.eat();
-        sparrow.noise();
+        for (Animal animal : animals) {
+            animal.getName();
+            animal.sleep();
+            animal.eat();
+            animal.noise();
 
-        System.out.println("EAGLE");
-        Eagle eagle = new Eagle();
-        eagle.sleep();
-        eagle.eat();
-        eagle.noise();
+            if (animal instanceof CanFly) {
+                doFly((CanFly) animal);
+            }
+            if (animal instanceof CanSwim) {
+                doSwim((CanSwim) animal);
+            }
+            System.out.println("-----------------------------------------------");
+        }
 
-        System.out.println("Dolphin");
-        Dolphin dolphin = new Dolphin();
-        dolphin.sleep();
-        dolphin.eat();
-        dolphin.noise();
-
-        System.out.println("-----------------------------------------------");
-
-        System.out.println("SPARROW: ");
-        doFly(sparrow);
-        System.out.println("EAGLE: ");
-        doFly(eagle);
-        System.out.println("DOG: ");
-        doSwim(dog);
-        System.out.println("DOLPHIN: ");
-        doSwim(dolphin);
+//        System.out.println("DOG");
+//        Dog dog = new Dog();
+//        dog.sleep();
+//        dog.eat();
+//        dog.noise();
+//
+//        System.out.println("SPARROW");
+//        Sparrow sparrow = new Sparrow();
+//        sparrow.sleep();
+//        sparrow.eat();
+//        sparrow.noise();
+//
+//        System.out.println("EAGLE");
+//        Eagle eagle = new Eagle();
+//        eagle.sleep();
+//        eagle.eat();
+//        eagle.noise();
+//
+//        System.out.println("Dolphin");
+//        Dolphin dolphin = new Dolphin();
+//        dolphin.sleep();
+//        dolphin.eat();
+//        dolphin.noise();
+//
+//        System.out.println("-----------------------------------------------");
+//
+//        System.out.println("SPARROW: ");
+//        doFly(sparrow);
+//        System.out.println("EAGLE: ");
+//        doFly(eagle);
+//        System.out.println("DOG: ");
+//        doSwim(dog);
+//        System.out.println("DOLPHIN: ");
+//        doSwim(dolphin);
     }
 }

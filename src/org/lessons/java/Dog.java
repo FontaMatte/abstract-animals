@@ -8,7 +8,12 @@ public class Dog  extends Animal implements CanSwim{
 
     @Override
     public void eat() {
-        System.out.println("Meat");;
+        System.out.println("Meat");
+    }
+
+    @Override
+    public void getName() {
+        System.out.println("DOG: ");
     }
 
     @Override
